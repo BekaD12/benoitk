@@ -1,0 +1,141 @@
+:root {
+    --black: #3a3a3a;
+    --white: #f8f8f8;
+    --blue: #2563af;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:active, a:hover {
+    outline-width: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.wrapper {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .item {
+    display: none;
+    visibility: hidden;
+}
+
+.wrapper h1 {
+    margin: 0;
+    color: var(--black);
+    font-size: 50px;
+    text-align: left;
+}
+
+.wrapper > .data-text {
+    user-select: none;
+    display: flex;
+    align-items: flex-end;
+    min-height: 20px;
+    color: var(--blue);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.wrapper > .data-text:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 3px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    color: var(--blue);
+    background: var(--black);
+    animation-name: fade;
+    animation-duration: 350ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.wrapper .social {
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+    margin-top: 5px;
+}
+
+.wrapper .social a {
+    display: flex;
+}
+
+.wrapper .social svg {
+    width: 40px;
+    height: auto;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+    .wrapper h1 {
+        font-size: 40px;
+    }
+
+    .wrapper .social {
+        width: 50%;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--black);
+    }
+
+    .wrapper h1 {
+        color: var(--white);
+    }
+
+    svg {
+        fill: var(--white);
+    }
+
+    .wrapper > .data-text:after {
+        background: var(--white);
+    }
+}

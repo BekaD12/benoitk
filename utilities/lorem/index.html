@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="/../assets/ico/favicon.png">
+    <title>Lorem Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="app">
+    <section class="wrapper">
+        <h1>Lorem Generator</h1>
+        <div class="lorem-box">
+            <span id="lorem" class="lorem" v-on:click="copyToClipboard">{{ lorem }}</span>
+            <span class="regenerate-lorem" v-on:click="generatelorem"></span>
+            <span class="copy-lorem" v-on:click="copyToClipboard"></span>
+            <span class="tooltip" v-if="copied">Lorem copied successfuly!</span>
+        </div>
+        <form @keydown.enter.prevent="">
+            <div class="field-wrap">
+                <label>Length</label>
+                <span class="range-value">{{settings.length}}</span>
+                <div class="range-slider_wrapper">
+                    <span class="slider-bar" v-bind:style="{ width: lengthThumbPosition + '%' }"></span>
+                    <input type="range" class="range-slider" min="6" v-bind:max="settings.maxLength" v-model="settings.length">
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+<script src="js/index.js"></script>
+</html>
+

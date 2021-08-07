@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap);
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-size: 100%;
+    border: 0;
+    vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+    content: '';
+    content: none
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+body {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    color: var(--color);
+    background: var(--background);
+    font-family: 'Fira Mono', monospace;
+    font-size: 160px
+}
+
+a {
+    color: var(--color);
+    text-decoration: none
+}
+
+.notfound {
+    animation: glitch 2s linear infinite
+}
+
+.takemeback {
+    cursor: pointer;
+    font-size: 60px;
+    animation: glitch 2s linear infinite
+}
+
+.notfound:after, .notfound:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 0
+}
+
+.takemeback:after, .takemeback:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 0
+}
+
+.notfound:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%)
+}
+
+.takemeback:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%)
+}
+
+.notfound:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
+}
+
+.takemeback:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%)
+}
+
+@keyframes glitch {
+    2%, 64% {
+        transform: translate(2px, 0) skew(0)
+    }
+    4%, 60% {
+        transform: translate(-2px, 0) skew(0)
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg)
+    }
+}
+
+@keyframes glitchTop {
+    2%, 64% {
+        transform: translate(2px, -2px)
+    }
+    4%, 60% {
+        transform: translate(-2px, 2px)
+    }
+    62% {
+        transform: translate(13px, -1px) skew(-13deg)
+    }
+}
+
+@keyframes glitchBotom {
+    2%, 64% {
+        transform: translate(-2px, 0)
+    }
+    4%, 60% {
+        transform: translate(-2px, 0)
+    }
+    62% {
+        transform: translate(-22px, 5px) skew(21deg)
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notfound {
+        font-size: 25vw
+    }
+
+    .notfound[data-title='403 Forbidden'] {
+        font-size: 11vw;
+    }
+
+    .takemeback {
+        font-size: 8vw
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #202020;
+        --color: #f9f9f9;
+    }
+}
+
+@media (prefers-color-scheme: no-preference), (prefers-color-scheme: light) {
+    :root {
+        --background: #f9f9f9;
+        --color: #111111;
+    }
+}

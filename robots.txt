@@ -1,0 +1,5 @@
+user-agent: *
+Allow: /$
+Disallow: /
+
+Sitemap: http://benoitk.fr/sitemap.xml

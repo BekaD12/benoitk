@@ -1,0 +1,26 @@
+RewriteEngine on
+RewriteBase /
+
+## Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301]
+
+## Removes www.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301]
+
+## Removes multiple consecutive slashes anywhere in URL
+RewriteCond %{THE_REQUEST} \s[^?]*//
+RewriteRule ^.*$ /$0 [R=301,NE]
+
+## Rewrite ^*.php/*$ to *.php$ (removes anything after a "*.php/")
+RewriteCond %{REQUEST_URI} ^(.*)\.php/(.*)$
+RewriteRule . %1.php [R=301]
+
+## Rewrites "/index.php" to "/"
+RewriteCond %{REQUEST_URI} ^(.*)/index\.php$ [NC]
+RewriteRule . %1 [R=301,L]
+
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
