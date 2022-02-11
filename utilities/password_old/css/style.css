@@ -10,11 +10,9 @@ body {
     position: relative;
     min-height: 100vh;
     margin: 0;
-    /*color: #444;*/
-    color: #2d2d2d;
-    background-color: #ebf2ff;
+    color: #000000;
+    background-color: #ffffff;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
-    /*background-color: #e8f0ff;*/
     font-size: 14px;
     letter-spacing: 0.5px;
 }
@@ -37,17 +35,17 @@ body {
 }
 
 .wrapper {
-    position: relative;
+position: relative;
     width: 535px;
     max-width: 100%;
     min-height: 400px;
     margin: 40px auto;
     padding: 40px;
     background-color: #f4f7fc;
-    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
-    border-radius: 3px;
+    -webkit-box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #fafafa;
+    border-radius: 15px;
     transition: all ease-in 0.25s;
 }
 
@@ -216,8 +214,8 @@ input::-moz-focus-outer {
 }
 
 .password-box .password {
-    position: absolute;
-    width: 70%;
+   position: absolute;
+    max-width: 75%;
     padding: 1.5em 1em;
     top: 50%;
     left: 50%;

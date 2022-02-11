@@ -1,5 +1,10 @@
-new Vue({
-    el: '#app',
+<script setup>
+import { ref } from 'vue'
+const count = ref(0)
+</script>
+
+<script>
+export default {
     data() {
         return {
             password: '',
@@ -10,7 +15,7 @@ new Vue({
                 maxSymbols: 10,
                 maxUppers: 10,
                 length: 12,
-                digits: 4,
+                digits: 2,
                 symbols: 2,
                 uppers: 2,
                 ambiguous: true,
@@ -37,7 +42,6 @@ new Vue({
                 numbers: 0,
                 symbols: 0
             };
-
             var weight = {
                 excess: 3,
                 upperCase: 4,
@@ -47,15 +51,13 @@ new Vue({
                 flatLower: 0,
                 flatNumber: 0
             };
-
             var strength = {
                 text: '',
                 score: 0
             };
-
-
             var baseScore = 30;
 
+            var i;
             for (i = 0; i < this.password.length; i++) {
                 if (this.password.charAt(i).match(/[A-Z]/g)) {
                     count.upperCase++;
@@ -161,8 +163,10 @@ new Vue({
             }
 
             // Add digits to password
+            var digit;
             for (i = 0; i < this.settings.digits; i++) {
                 digit = Math.round(Math.random() * 9);
+                var numberIndex;
                 numberIndex = digitsPositionArray[Math.floor(Math.random() * digitsPositionArray.length)];
 
                 passwordArray[numberIndex] = digit;
@@ -204,4 +208,96 @@ new Vue({
             this.password = passwordArray.join("");
         },
     },
-});
+};
+</script>
+
+<template>
+    <section class="wrapper">
+        <h1>Password Generator</h1>
+        <div class="password-box">
+            <span
+                id="password"
+                class="password"
+                v-on:click="copyToClipboard() + count++"
+            >{{ password }}</span>
+            <span class="regenerate-password" v-on:click="generatePassword"></span>
+            <span class="copy-password" v-on:click="copyToClipboard() + count++"></span>
+            <span class="tooltip" v-if="copied">Password copied x{{ count }}</span>
+        </div>
+        <form @keydown.enter.prevent>
+            <div class="field-wrap">
+                <label>Strength</label>
+                <span class="range-value">{{ strength.text }}</span>
+                <div class="range-slider_wrapper slider-strength" v-bind:class="strength.text">
+                    <span class="slider-bar" v-bind:style="{ width: strength.score + '%' }"></span>
+                    <input
+                        type="range"
+                        class="range-slider"
+                        min="0"
+                        max="100"
+                        v-model="strength.score"
+                        disabled
+                    />
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="field-wrap">
+                <label>Length</label>
+                <span class="range-value">{{ settings.length }}</span>
+                <div class="range-slider_wrapper">
+                    <span class="slider-bar" v-bind:style="{ width: lengthThumbPosition + '%' }"></span>
+                    <input
+                        type="range"
+                        class="range-slider"
+                        min="6"
+                        v-bind:max="settings.maxLength"
+                        v-model="settings.length"
+                    />
+                </div>
+            </div>
+            <div class="field-wrap">
+                <label>Digits</label>
+                <span class="range-value">{{ settings.digits }}</span>
+                <div class="range-slider_wrapper">
+                    <span class="slider-bar" v-bind:style="{ width: digitsThumbPosition + '%' }"></span>
+                    <input
+                        type="range"
+                        class="range-slider"
+                        min="0"
+                        v-bind:max="settings.maxDigits"
+                        v-model="settings.digits"
+                    />
+                </div>
+            </div>
+            <div class="field-wrap">
+                <label>Symbols</label>
+                <span class="range-value">{{ settings.symbols }}</span>
+                <div class="range-slider_wrapper">
+                    <span class="slider-bar" v-bind:style="{ width: symbolsThumbPosition + '%' }"></span>
+                    <input
+                        type="range"
+                        class="range-slider"
+                        min="0"
+                        v-bind:max="settings.maxSymbols"
+                        v-model="settings.symbols"
+                    />
+                </div>
+            </div>
+
+            <div class="field-wrap">
+                <label>Uppercases</label>
+                <span class="range-value">{{ settings.uppers }}</span>
+                <div class="range-slider_wrapper">
+                    <span class="slider-bar" v-bind:style="{ width: uppersThumbPosition + '%' }"></span>
+                    <input
+                        type="range"
+                        class="range-slider"
+                        min="0"
+                        v-bind:max="settings.maxUppers"
+                        v-model="settings.uppers"
+                    />
+                </div>
+            </div>
+        </form>
+    </section>
+</template>
