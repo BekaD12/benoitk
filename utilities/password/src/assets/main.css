@@ -4,10 +4,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -16,8 +12,6 @@ body {
   position: relative;
   min-height: 100vh;
   margin: 0;
-  color: #000000;
-  background-color: #ffffff;
   font-size: 14px;
   letter-spacing: 0.5px;
 }
@@ -46,7 +40,6 @@ body {
   min-height: 400px;
   margin: 60px auto;
   padding: 40px;
-  background-color: #f4f7fc;
   -webkit-box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
   box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
   border: 1px solid #fafafa;
@@ -231,6 +224,7 @@ input::-moz-focus-outer {
   left: 50%;
   word-wrap: break-word;
   transform: translate(-50%, -50%);
+  color: #000;
 }
 
 .regenerate-password,
@@ -254,7 +248,7 @@ input::-moz-focus-outer {
 .regenerate-password {
   cursor: pointer;
   background-color: #fff;
-  background-image: url("@/src/assets/reload.svg");
+  background-image: url("@/assets/reload.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 40%;
@@ -269,7 +263,7 @@ input::-moz-focus-outer {
 .copy-password {
   cursor: pointer;
   background-color: #fff;
-  background-image: url("@/src/assets/copy.svg");
+  background-image: url("@/assets/copy.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50%;
