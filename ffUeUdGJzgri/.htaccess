@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# 404
+	ErrorDocument 404 /404.html
+    ErrorDocument 403 /403.html
+
+#Password
+#AuthType Basic
+#AuthName "Password Protected Area"
+#AuthUserFile /home/julienkfkb-bk/benoitk/ffUeUdGJzgri/.htpasswd
+#Require valid-user

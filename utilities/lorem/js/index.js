@@ -11,16 +11,16 @@ new Vue({
         };
     },
     computed: {
-        lengthThumbPosition: function () {
+        lengthThumbPosition: function() {
             return (((this.settings.length - 6) / (this.settings.maxLength - 6)) * 100);
         },
-        digitsThumbPosition: function () {
+        digitsThumbPosition: function() {
             return (((this.settings.digits - 0) / (this.settings.maxDigits - 0)) * 100);
         },
-        symbolsThumbPosition: function () {
+        symbolsThumbPosition: function() {
             return (((this.settings.symbols - 0) / (this.settings.maxSymbols - 0)) * 100);
         },
-        strength: function () {
+        strength: function() {
             var count = {
                 excess: 0,
                 upperCase: 0,
@@ -106,7 +106,7 @@ new Vue({
     },
     watch: {
         settings: {
-            handler: function () {
+            handler: function() {
                 this.generatelorem();
             },
             deep: true
@@ -134,12 +134,12 @@ new Vue({
         },
         // generate the lorem
         generatelorem() {
-            var lettersSetArray = ["a","ac","at","abaces","adipiscing","aenean","æternam","alea","aliquam","aliquet","alter","amet","ante","arcu","arma","augue","ave","bacchæ","bagoas","balastrum","bannio","barbari","beati","bene","bibendum","bis","blandit","bonum","canem","carpe","cave","cogito","congue","consectetuer","consectetur","consensus","consequat","convallis","cras","credo","cubilia","curabitur","curae","cursus","de","deo","desinit","diam","diem","dignissim","dignus","dolor","dui","duis","egestas","ego","eleifend","elementum","elit","enim","erat","ergo","eros","est","et","eu","euismod","extenso","extremis","facto","faucibus","felis","fermentum","feugiat","fili","fine","fluctuia","fusce","gabalus","gallice","gallus","gannitura","gastrum","gemulus","generis","genitus","gnaritas","grata","gratias","gravida","habilititas","hac","halatus","hem","hemithea","hendrerit","hic","hippace","hirpex","hominis","homo","honorabilis","hortatio","hymnus","iaculis","ibi","icteros","id","idea","idolum","igneus","ignorabilis","imperdiet","in","integer","intrare","ipsum","jacta","jactare","jocaliter","joculatio","jubar","jubile","jugalis","junctor","justificator","justo","juvo","kalendae","lacrimabilis","lacus","lateramen","lato","laudatio","lectus","leo","libero","libris","ligula","lobortis","lorem","luctus","maecenas","magna","massa","mater","mauris","memoriam","mergitur","metus","mi","molestie","mollis","morbi","naturalis","nauticus","nec","nefastus","negligenter","neoterice","nibh","nihil","nisl","nomine","non","nonummy","nulla","nunc","obeo","oblatio","obstat","occultate","odio","offensibilis","oleo","omnium","optimus","orbi","orci","ornare","pace","patri","pauperes","pede","pellentesque","persona","pharetra","placerat","porttitor","posuere","praesent","pretium","primis","proin","pulvinar","purus","qua","qualitas","quam","quæstus","quibusdam","quinam","quis","quo","quoque","quorsum","raptio","rationabilis","recensio","repetita","revelat","rhoncus","risus","rutrum","sancti","sapien","scelerisque","sed","sem","semper","sensu","sit","sodales","sollicitudin","spiritu","sum","suscipit","suspendisse","tellus","tempor","tempus","tincidunt","tortor","tristique","tu","turpis","ubi","ubique","ullamcorper","ultor","ultrices","ultricies","unitas","ut","utrimque","utus","varius","vehicula","vel","velit","veni","vestibulum","vici","vidi","vinum","vitae","vivamus","volutpat","voto","vox","vulputate","xenium","xeniolum","xiphias","zelator","zelotes","zona","zonalis"];
+            var lettersSetArray = ["a", "ac", "at", "abaces", "adipiscing", "aenean", "æternam", "alea", "aliquam", "aliquet", "alter", "amet", "ante", "arcu", "arma", "augue", "ave", "bacchæ", "bagoas", "balastrum", "bannio", "barbari", "beati", "bene", "bibendum", "bis", "blandit", "bonum", "canem", "carpe", "cave", "cogito", "congue", "consectetuer", "consectetur", "consensus", "consequat", "convallis", "cras", "credo", "cubilia", "curabitur", "curae", "cursus", "de", "deo", "desinit", "diam", "diem", "dignissim", "dignus", "dolor", "dui", "duis", "egestas", "ego", "eleifend", "elementum", "elit", "enim", "erat", "ergo", "eros", "est", "et", "eu", "euismod", "extenso", "extremis", "facto", "faucibus", "felis", "fermentum", "feugiat", "fili", "fine", "fluctuia", "fusce", "gabalus", "gallice", "gallus", "gannitura", "gastrum", "gemulus", "generis", "genitus", "gnaritas", "grata", "gratias", "gravida", "habilititas", "hac", "halatus", "hem", "hemithea", "hendrerit", "hic", "hippace", "hirpex", "hominis", "homo", "honorabilis", "hortatio", "hymnus", "iaculis", "ibi", "icteros", "id", "idea", "idolum", "igneus", "ignorabilis", "imperdiet", "in", "integer", "intrare", "ipsum", "jacta", "jactare", "jocaliter", "joculatio", "jubar", "jubile", "jugalis", "junctor", "justificator", "justo", "juvo", "kalendae", "lacrimabilis", "lacus", "lateramen", "lato", "laudatio", "lectus", "leo", "libero", "libris", "ligula", "lobortis", "lorem", "luctus", "maecenas", "magna", "massa", "mater", "mauris", "memoriam", "mergitur", "metus", "mi", "molestie", "mollis", "morbi", "naturalis", "nauticus", "nec", "nefastus", "negligenter", "neoterice", "nibh", "nihil", "nisl", "nomine", "non", "nonummy", "nulla", "nunc", "obeo", "oblatio", "obstat", "occultate", "odio", "offensibilis", "oleo", "omnium", "optimus", "orbi", "orci", "ornare", "pace", "patri", "pauperes", "pede", "pellentesque", "persona", "pharetra", "placerat", "porttitor", "posuere", "praesent", "pretium", "primis", "proin", "pulvinar", "purus", "qua", "qualitas", "quam", "quæstus", "quibusdam", "quinam", "quis", "quo", "quoque", "quorsum", "raptio", "rationabilis", "recensio", "repetita", "revelat", "rhoncus", "risus", "rutrum", "sancti", "sapien", "scelerisque", "sed", "sem", "semper", "sensu", "sit", "sodales", "sollicitudin", "spiritu", "sum", "suscipit", "suspendisse", "tellus", "tempor", "tempus", "tincidunt", "tortor", "tristique", "tu", "turpis", "ubi", "ubique", "ullamcorper", "ultor", "ultrices", "ultricies", "unitas", "ut", "utrimque", "utus", "varius", "vehicula", "vel", "velit", "veni", "vestibulum", "vici", "vidi", "vinum", "vitae", "vivamus", "volutpat", "voto", "vox", "vulputate", "xenium", "xeniolum", "xiphias", "zelator", "zelotes", "zona", "zonalis"];
 
             var loremArray = [];
 
             for (var i = 0; i < this.settings.length; i++) {
-                    loremArray[i] = lettersSetArray[Math.floor(Math.random() * lettersSetArray.length)];
+                loremArray[i] = lettersSetArray[Math.floor(Math.random() * lettersSetArray.length)];
             }
             this.lorem = loremArray.join(" ");
         },
