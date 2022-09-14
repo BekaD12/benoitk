@@ -4,10 +4,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Copy: typeof import('./components/Copy.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     HeaderHome: typeof import('./components/HeaderHome.vue')['default']
-    README: typeof import('./components/README.md')['default']
     Typing: typeof import('./components/Typing.vue')['default']
   }
 }
