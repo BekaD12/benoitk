@@ -1,0 +1,40 @@
+button:
+  about: À propos de
+  back: Take me back
+  go: Essayer
+  home: Accueil
+  toggle_dark: Basculer en mode sombre
+  toggle_langs: Changer de langue
+intro:
+  desc: Exemple d'application Vite
+  dynamic-route: Démo de route dynamique
+  hi: Salut, {name}!
+  aka: Aussi connu sous le nom de
+  whats-your-name: Comment t'appelles-tu ?
+not-found: Page non trouvée
+cv:
+  name: benoit kourotchkine
+  position: développeur fullstack
+  expertise: compétences
+  work-experience: expériences professionnelles
+  education: formation
+  hobbies: centres d’intérêt
+  hobbies-list: Basket-ball / Natation / Cyclisme / Animation Japonaise / Jeux vidéo / Mode
+  languages: langues
+  languages-fr: Français - Langue maternelle
+  languages-en: Anglais - Bilingue
+  languages-es: Espagnol - Moyen
+  software: logiciel
+  os: système d'exploitation
+  shopify-title: Développeur Shopify
+  shopify-desc: Développement de thèmes pour deux sites ainsi que de leurs back-office totalement customisé
+  andafter-title: Développeur Fullstack
+  andafter-desc-1: Développement et maintenance de plus de 15 sites e-commerce
+  andafter-desc-2: Gestion autonome sur une plate-forme communautaire
+  andafter-desc-3: Intégration de diverses créations graphiques
+  andafter-desc-4: Co-conception en collaboration avec les équipes créatives
+  andafter-desc-5: Expertise sur un CRM propriétaire (easyboutiq)
+  zara-title: Conseiller clientèle
+  zara-desc: Accueil clientèle / Conseil et vente / Gestion br de réserve / Ouverture et fermeture de caisse / Merchandising
+home:
+  description: Je suis actuellement à la recherche d’un poste de développeur Fullstack avec une prédominance Frontend qui est la branche de mon métier que je maîtrise et apprécie le plus. Utilisant actuellement Vue.js, Typescript et Shopify (liquid) sur des projets personnels, ce serait un plus de pouvoir utiliser ces technologies dans un cadre professionnel.

@@ -1,0 +1,143 @@
+.container {
+  max-width: 1080px !important;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sizer {
+  width: calc(50% - 2%);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.mail,
+.phone,
+.address {
+  line-height: 1.2;
+  margin-left: 5px;
+}
+
+h1.name {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h2.position {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  text-align: left;
+}
+
+ul {
+  line-height: 1.5;
+  list-style: initial;
+  text-align: left;
+}
+
+.container-about p {
+  font-size: 9;
+  text-align-last: left;
+}
+
+.container-hobbies p {
+  line-height: 1.6;
+}
+
+.container-skills:after,
+.container-experiences:after {
+  background-color: currentColor;
+  border-radius: 4px;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+}
+
+[i-carbon-email=""],[i-carbon-location-filled=""] {
+  height: 20px;
+  width: 20px;
+}
+
+p.description {
+  line-height: 1.5;
+}
+
+@media (max-width: 576px) {
+  .spacing {
+    margin: 25px 0;
+  }
+
+  .sizer {
+    width: calc(100%);
+  }
+
+  .mail,
+  .address {
+    font-size: 11px;
+  }
+  
+  .data {
+    flex-direction: column;
+  }
+
+  .info{
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  h1.name {
+    font-size: 28px;
+  }
+
+  h2.position {
+    font-size: 20px;
+  }
+}
