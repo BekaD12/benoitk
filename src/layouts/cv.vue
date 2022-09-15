@@ -13,6 +13,7 @@
 @media (max-width: 576px) {
   .resume {
     padding: 0 25px;
+    margin-bottom: 100px;
   }
 }
 </style>

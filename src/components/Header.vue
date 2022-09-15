@@ -12,10 +12,10 @@ const toggleLocales = () => {
     <a href="./" class="icon-btn mx-2" :title="t('button.home')">
       <div i-carbon-home />
     </a>
-    <a v-if="locale == 'fr'" class="icon-btn mx-2" href="../assets/cv/cv_benoitk.pdf" target="blank">
+    <a v-if="locale == 'fr'" class="icon-btn mx-2" href="/cv_benoitk.pdf" target="blank">
       <div i-carbon:generate-pdf />
     </a>
-    <a v-if="locale == 'en'" class="icon-btn mx-2" href="../assets/cv/cv_benoitk_en.pdf" target="blank">
+    <a v-if="locale == 'en'" class="icon-btn mx-2" href="/cv_benoitk_en.pdf" target="blank">
       <div i-carbon:generate-pdf />
     </a>
     <a class="icon-btn mx-2" :title="t('button.toggle_dark')" @click="toggleDark()">

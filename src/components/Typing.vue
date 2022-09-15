@@ -54,7 +54,7 @@ onUnmounted(() => {
 
     <div class="social">
       <div>
-        <a href="./cv" aria-label="resume" rel="noopener" title="curriculum vitae">
+        <a class="cv" href="./cv" aria-label="resume" rel="noopener" title="curriculum vitae">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M3.87868 1.87868C4.44129 1.31607 5.20435 1 6 1H14.5C14.7652 1 15.0196 1.10536 15.2071 1.29289L20.7071 6.79289C20.8946 6.98043 21 7.23478 21 7.5V20C21 20.7957 20.6839 21.5587 20.1213 22.1213C19.5587 22.6839 18.7957 23 18 23H4C3.44772 23 3 22.5523 3 22C3 21.4477 3.44772 21 4 21H18C18.2652 21 18.5196 20.8946 18.7071 20.7071C18.8946 20.5196 19 20.2652 19 20V7.91421L14.0858 3H6C5.73478 3 5.48043 3.10536 5.29289 3.29289C5.10536 3.48043 5 3.73478 5 4V8C5 8.55228 4.55228 9 4 9C3.44772 9 3 8.55228 3 8V4C3 3.20435 3.31607 2.44129 3.87868 1.87868Z"
@@ -72,7 +72,7 @@ onUnmounted(() => {
       </div>
 
       <div>
-        <a target="_blank" href="mailto:bkourot@gmail.com" aria-label="mail" rel="noopener" title="bkourot@gmail.com">
+        <a class="mail" target="_blank" href="mailto:bkourot@gmail.com" aria-label="mail" rel="noopener" title="bkourot@gmail.com">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"
@@ -85,7 +85,7 @@ onUnmounted(() => {
       </div>
 
       <div>
-        <a target="_blank" href="https://www.linkedin.com/in/benoitkourot/" aria-label="linkedin" rel="noopener"
+        <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/benoitkourot/" aria-label="linkedin" rel="noopener"
           title="linkedin : benoitkourot">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"

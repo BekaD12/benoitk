@@ -81,7 +81,7 @@ svg:not(:root) {
 }
 
 .wrapper h1 {
-    color: var(--black);
+    color: var(--black, #000);
     font-size: 54px;
     font-weight: bold;
     margin: 0;
@@ -121,8 +121,12 @@ svg:not(:root) {
     width: 25%;
 }
 
-.wrapper .social a {
-    display: flex;
+.wrapper .social a.mail svg {
+    margin-top: 3px;
+}
+
+.wrapper .social a.linkedin svg {
+    margin-top: 1px;
 }
 
 .wrapper .social svg {
@@ -180,19 +184,4 @@ html.dark svg path {
 
 html.dark .wrapper>.data-text:after {
     background: #fffdf2;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: dark;
-    }
-    .wrapper h1 {
-        color: var(--white);
-    }
-    svg {
-        fill: var(--white);
-    }
-    .wrapper>.data-text:after {
-        background: var(--white);
-    }
 }

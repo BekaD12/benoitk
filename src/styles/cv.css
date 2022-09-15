@@ -126,7 +126,7 @@ p.description {
   }
 
   .info{
-    align-items: center;
+    align-items: baseline;
   }
 
   ul {
