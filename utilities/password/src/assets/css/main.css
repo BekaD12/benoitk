@@ -1,0 +1,333 @@
+:root {
+  --color-background: #fafafa;
+  --color-wrapper-background: #f1f6ff;
+  --color-text: #212121;
+  --blue: #3fa4f4;
+  --blue-2: #9fd2fa;
+  --blue-3: #2799f3;
+  --green: #80bb3b;
+  --green-2: #d5e9bd;
+  --orange: #ff9800;
+  --orange-2: #ffd699;
+  --red: #ff6666;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #101010;
+    --color-wrapper-background: #101010;
+    --color-text: #fafafa;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+#app {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  letter-spacing: 0.5;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+.wrapper {
+  background: var(--color-wrapper-background);
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 0 1.5rem 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 0 1.5rem 0 rgb(0 0 0 / 10%);
+  margin: 6rem auto;
+  max-width: 100%;
+  min-height: 40rem;
+  padding: 5rem;
+  position: relative;
+  transition: all ease-in 0.25s;
+  width: 55rem;
+}
+
+h1 {
+  margin: 0 0 4rem;
+  text-align: center;
+}
+
+.field-wrap {
+  margin-bottom: 2rem;
+}
+
+form {
+  margin-top: 3rem;
+  overflow: overlay;
+}
+
+label {
+  display: inline-block;
+  min-width: 20%;
+}
+
+.range-slider_wrapper {
+  margin: 1.5rem 0 2.5rem;
+  position: relative;
+  width: 100%;
+}
+
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--blue-2);
+  border-radius: .3rem;
+  cursor: pointer;
+  height: .6rem;
+  margin: 0;
+  transition: all ease-in 0.25s;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--blue-3);
+  border: 0;
+  border-radius: 0;
+  height: 1.5rem;
+  position: relative;
+  width: .4rem;
+}
+
+.range-slider::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--blue-3);
+  border: 0;
+  border-radius: 0;
+  height: 1.5rem;
+  position: relative;
+  width: .4rem;
+}
+
+.range-slider:focus {
+  outline: none;
+}
+
+.range-slider:hover::-webkit-slider-thumb,
+.range-slider:active::-webkit-slider-thumb {
+  top: 0;
+}
+
+::-moz-range-track {
+  background: transparent;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}
+
+.range-value {
+  border-radius: .4rem;
+  display: inline-block;
+  float: right;
+  font-size: 1.2rem;
+  min-width: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  vertical-align: bottom;
+}
+
+.slider-bar {
+  background: var(--blue);
+  border-bottom-left-radius: .3rem;
+  border-top-left-radius: .3rem;
+  bottom: 0;
+  height: .6rem;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.password-box {
+  background: #fff;
+  border-radius: .5rem;
+  cursor: copy;
+  letter-spacing: .2rem;
+  margin-bottom: 4rem;
+  min-height: 8rem;
+  position: relative;
+  text-align: center;
+  transition: all ease-in 0.3s;
+  user-select: none;
+  width: 100%;
+}
+
+.password-box .password {
+  color: var(--color-text);
+  left: 50%;
+  max-width: 75%;
+  padding: 1.5em 1em;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  word-wrap: break-word;
+}
+
+.regenerate-password,
+.copy-password {
+  height: 50%;
+  position: absolute;
+  right: 0;
+  transition: all ease-in 0.25s;
+  width: 4.4rem;
+}
+
+.regenerate-password:hover,
+.copy-password:hover {
+  opacity: 0.8;
+}
+
+.regenerate-password {
+  background-image: url("@/assets/reload.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  cursor: pointer;
+  top: 0;
+  transition: all ease-in 0.25s;
+}
+
+.regenerate-password:hover {
+  background-color: #fff;
+}
+
+.copy-password {
+  background-image: url("@/assets/copy.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  bottom: 0;
+  cursor: pointer;
+  transition: all ease-in 0.25s;
+}
+
+.copy-password:hover {
+  background-color: #fff;
+}
+
+.tooltip {
+  bottom: -2.5rem;
+  display: block;
+  font-size: 1.1rem;
+  left: 50%;
+  padding: 0.5em;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+textarea,
+textarea:focus {
+  font-size: 1.6rem;
+}
+
+.seperator {
+  background-color: #fff;
+  border-radius: .4rem;
+  height: .3rem;
+  margin: 6rem 0 4rem;
+  width: 100%;
+}
+
+.slider-strength .range-slider {
+  cursor: default;
+}
+
+.slider-strength .slider-bar {
+  border-radius: .3rem;
+  transition: all ease-in 0.25s;
+}
+
+.slider-strength .range-slider::-webkit-slider-thumb {
+  background-color: transparent;
+}
+
+.slider-strength .range-slider::-moz-range-thumb {
+  background-color: transparent;
+}
+
+.slider-strength.weak .range-slider {
+  background-color: white;
+}
+
+.slider-strength.weak .slider-bar,
+.slider-strength.weak .slider-bar:after {
+  background-color: var(--red);
+}
+
+.slider-strength.average .range-slider {
+  background-color: var(--orange-2);
+}
+
+.slider-strength.average .slider-bar,
+.slider-strength.average .slider-bar:after {
+  background-color: var(--orange);
+}
+
+.slider-strength.strong .range-slider {
+  background-color: var(--green-2);
+}
+
+.slider-strength.strong .slider-bar,
+.slider-strength.strong .slider-bar:after {
+  background-color: var(--green);
+}
+
+.slider-strength.secure .range-slider {
+  background-color: var(--green-2);
+}
+
+.slider-strength.secure .slider-bar,
+.slider-strength.secure .slider-bar:after {
+  background-color: var(--green);
+}
+
+@media only screen and (max-device-width: 64em) {
+  #app {
+    margin: 2.5rem auto;
+    max-height: 95vh;
+    width: 95vw;
+  }
+
+  .wrapper {
+    margin: 0;
+    padding: 2.5rem 1.5rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+}

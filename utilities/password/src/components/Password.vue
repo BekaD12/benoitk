@@ -36,13 +36,13 @@ export default {
             return (((this.settings.uppers) / (this.settings.maxUppers)) * 100);
         },
         strength: function () {
-            var count = {
+            const count = {
                 excess: 0,
                 upperCase: 0,
                 numbers: 0,
                 symbols: 0
             };
-            var weight = {
+            const weight = {
                 excess: 3,
                 upperCase: 4,
                 numbers: 5,
@@ -51,13 +51,13 @@ export default {
                 flatLower: 0,
                 flatNumber: 0
             };
-            var strength = {
+            const strength = {
                 text: '',
                 score: 0
             };
-            var baseScore = 30;
+            const baseScore = 30;
 
-            var i;
+            let i;
             for (i = 0; i < this.password.length; i++) {
                 if (this.password.charAt(i).match(/[A-Z]/g)) {
                     count.upperCase++;
@@ -86,7 +86,7 @@ export default {
                 weight.flatNumber = -50;
             }
 
-            var score =
+            const score =
                 baseScore +
                 (count.excess * weight.excess) +
                 (count.upperCase * weight.upperCase) +
@@ -129,11 +129,11 @@ export default {
         // copy password to clipboard
         copyToClipboard() {
             // we should create a textarea, put the password inside it, select it and finally copy it
-            var copyElement = document.createElement("textarea");
+            const copyElement = document.createElement("textarea");
             copyElement.style.opacity = '0';
             copyElement.style.position = 'fixed';
             copyElement.textContent = this.password;
-            var body = document.getElementsByTagName('body')[0];
+            const body = document.getElementsByTagName('body')[0];
             body.appendChild(copyElement);
             copyElement.select();
             document.execCommand('copy');
@@ -147,13 +147,12 @@ export default {
         },
         // generate the password
         generatePassword() {
-            var lettersSetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-            var uppersSetArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-            var symbolsSetArray = ["=", "+", "-", "^", "?", "!", "%", "&", "*", "$", "#", "@", "|"];
-            //var ambiguousSetArray = ["(",")","{","}","[","]","(",")","/","~",";",":",".","<",">"];
-            var passwordArray = [];
-            var digitsArray = [];
-            var digitsPositionArray = [];
+            const lettersSetArray = 'abcdefghijklmnopqrstuvwxyz'.split('')
+            const uppersSetArray = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+            const symbolsSetArray = '=+-^?!%&*$#@|'.split('');
+            const passwordArray = [];
+            const digitsArray = [];
+            const digitsPositionArray = [];
 
             // first, fill the password array with letters, uppercase and lowercase
             for (var i = 0; i < this.settings.length; i++) {
@@ -163,17 +162,17 @@ export default {
             }
 
             // Add digits to password
-            var digit;
+            let digit;
             for (i = 0; i < this.settings.digits; i++) {
                 digit = Math.round(Math.random() * 9);
-                var numberIndex;
+                let numberIndex;
                 numberIndex = digitsPositionArray[Math.floor(Math.random() * digitsPositionArray.length)];
 
                 passwordArray[numberIndex] = digit;
 
                 /* remove position from digitsPositionArray so we make sure to the have the exact number of digits in our password
                 since without this step, numbers may override other numbers */
-                var j = digitsPositionArray.indexOf(numberIndex);
+                const j = digitsPositionArray.indexOf(numberIndex);
                 if (i !== -1) {
                     digitsPositionArray.splice(j, 1);
                 }
@@ -181,14 +180,14 @@ export default {
 
             // add special characters "symbols"
             for (i = 0; i < this.settings.symbols; i++) {
-                var symbol = symbolsSetArray[Math.floor(Math.random() * symbolsSetArray.length)];
-                var symbolIndex = digitsPositionArray[Math.floor(Math.random() * digitsPositionArray.length)];
+                const symbol = symbolsSetArray[Math.floor(Math.random() * symbolsSetArray.length)];
+                const symbolIndex = digitsPositionArray[Math.floor(Math.random() * digitsPositionArray.length)];
 
                 passwordArray[symbolIndex] = symbol;
 
                 /* remove position from digitsPositionArray so we make sure to the have the exact number of digits in our password
                 since without this step, numbers may override other numbers */
-                var j = digitsPositionArray.indexOf(symbolIndex);
+                const j = digitsPositionArray.indexOf(symbolIndex);
                 if (i !== -1) {
                     digitsPositionArray.splice(j, 1);
                 }
@@ -196,11 +195,11 @@ export default {
 
             // add/remove "uppers"
             for (i = 0; i < this.settings.uppers; i++) {
-                var upper = uppersSetArray[Math.floor(Math.random() * uppersSetArray.length)];
-                var upperIndex = digitsPositionArray[Math.floor(Math.random() * digitsPositionArray.length)];
+                const upper = uppersSetArray[Math.floor(Math.random() * uppersSetArray.length)];
+                const upperIndex = digitsPositionArray[Math.floor(Math.random() * digitsPositionArray.length)];
 
                 passwordArray[upperIndex] = upper;
-                var j = digitsPositionArray.indexOf(upperIndex);
+                const j = digitsPositionArray.indexOf(upperIndex);
                 if (i !== -1) {
                     digitsPositionArray.splice(j, 1);
                 }
@@ -215,11 +214,7 @@ export default {
     <section class="wrapper">
         <h1>Password Generator</h1>
         <div class="password-box">
-            <span
-                id="password"
-                class="password"
-                v-on:click="copyToClipboard() + count++"
-            >{{ password }}</span>
+            <span id="password" class="password" v-on:click="copyToClipboard() + count++">{{ password }}</span>
             <span class="regenerate-password" v-on:click="generatePassword"></span>
             <span class="copy-password" v-on:click="copyToClipboard() + count++"></span>
             <span class="tooltip" v-if="copied">Password copied x{{ count }}</span>
@@ -230,14 +225,7 @@ export default {
                 <span class="range-value">{{ strength.text }}</span>
                 <div class="range-slider_wrapper slider-strength" v-bind:class="strength.text">
                     <span class="slider-bar" v-bind:style="{ width: strength.score + '%' }"></span>
-                    <input
-                        type="range"
-                        class="range-slider"
-                        min="0"
-                        max="100"
-                        v-model="strength.score"
-                        disabled
-                    />
+                    <input type="range" class="range-slider" min="0" max="100" v-model="strength.score" disabled />
                 </div>
             </div>
             <div class="seperator"></div>
@@ -246,13 +234,8 @@ export default {
                 <span class="range-value">{{ settings.length }}</span>
                 <div class="range-slider_wrapper">
                     <span class="slider-bar" v-bind:style="{ width: lengthThumbPosition + '%' }"></span>
-                    <input
-                        type="range"
-                        class="range-slider"
-                        min="6"
-                        v-bind:max="settings.maxLength"
-                        v-model="settings.length"
-                    />
+                    <input type="range" class="range-slider" min="6" v-bind:max="settings.maxLength"
+                        v-model="settings.length" />
                 </div>
             </div>
             <div class="field-wrap">
@@ -260,13 +243,8 @@ export default {
                 <span class="range-value">{{ settings.digits }}</span>
                 <div class="range-slider_wrapper">
                     <span class="slider-bar" v-bind:style="{ width: digitsThumbPosition + '%' }"></span>
-                    <input
-                        type="range"
-                        class="range-slider"
-                        min="0"
-                        v-bind:max="settings.maxDigits"
-                        v-model="settings.digits"
-                    />
+                    <input type="range" class="range-slider" min="0" v-bind:max="settings.maxDigits"
+                        v-model="settings.digits" />
                 </div>
             </div>
             <div class="field-wrap">
@@ -274,13 +252,8 @@ export default {
                 <span class="range-value">{{ settings.symbols }}</span>
                 <div class="range-slider_wrapper">
                     <span class="slider-bar" v-bind:style="{ width: symbolsThumbPosition + '%' }"></span>
-                    <input
-                        type="range"
-                        class="range-slider"
-                        min="0"
-                        v-bind:max="settings.maxSymbols"
-                        v-model="settings.symbols"
-                    />
+                    <input type="range" class="range-slider" min="0" v-bind:max="settings.maxSymbols"
+                        v-model="settings.symbols" />
                 </div>
             </div>
 
@@ -289,13 +262,8 @@ export default {
                 <span class="range-value">{{ settings.uppers }}</span>
                 <div class="range-slider_wrapper">
                     <span class="slider-bar" v-bind:style="{ width: uppersThumbPosition + '%' }"></span>
-                    <input
-                        type="range"
-                        class="range-slider"
-                        min="0"
-                        v-bind:max="settings.maxUppers"
-                        v-model="settings.uppers"
-                    />
+                    <input type="range" class="range-slider" min="0" v-bind:max="settings.maxUppers"
+                        v-model="settings.uppers" />
                 </div>
             </div>
         </form>

@@ -7,6 +7,5 @@ import Password from "./components/Password.vue";
 </template>
 
 <style>
-@import "./assets/base.css";
-@import "./assets/main.css";
+@import "./assets/css/main.css";
 </style>
