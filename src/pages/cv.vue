@@ -123,10 +123,10 @@ const { t } = useI18n()
             {{ t('cv.work-experience') }}
           </h3>
 
-          <div mt="5">
+          <div class="spacer">
             <div class="info">
-              <h6>{{ t('cv.shopify-title') }}</h6>
-              <span>2021 - 2022</span>
+              <h4>{{ t('cv.shopify-title') }}</h4>
+              <span>{{ t('month.september') }} 2021 - {{ t('month.april') }} 2022</span>
             </div>
             <h5>Freelance</h5>
             <ul>
@@ -134,10 +134,10 @@ const { t } = useI18n()
             </ul>
           </div>
 
-          <div mt="5">
+          <div class="spacer">
             <div class="info">
-              <h6>{{ t('cv.andafter-title') }}</h6>
-              <span>2018 - 2021</span>
+              <h4>{{ t('cv.andafter-title') }}</h4>
+              <span>{{ t('month.january') }} 2018 - {{ t('month.september') }} 2021</span>
             </div>
             <h5>And After</h5>
             <ul>
@@ -149,9 +149,9 @@ const { t } = useI18n()
             </ul>
           </div>
 
-          <div mt="5">
+          <div class="spacer">
             <div class="info">
-              <h6>{{ t('cv.zara-title') }}</h6>
+              <h4>{{ t('cv.zara-title') }}</h4>
               <span>2012 - 2016</span>
             </div>
             <h5>Zara France</h5>
@@ -163,7 +163,18 @@ const { t } = useI18n()
 
         <div class="sizer">
           <h3> {{ t('cv.education') }}</h3>
-          <div mt="5">
+
+          <div class="spacer">
+            <div class="info">
+              <h4>{{ t('cv.vue-title') }}</h4>
+              <span>{{ t('month.april') }} 2022 - {{ t('month.october') }} 2022</span>
+            </div>
+            <p>
+              {{ t('cv.vue-desc') }}
+            </p>
+          </div>
+
+          <div class="spacer">
             <div class="info">
               <h4>3W Academy Paris 18e</h4>
               <span>2017</span>
@@ -175,27 +186,31 @@ const { t } = useI18n()
               Développeur intégrateur en réalisation d’applications web
             </p>
           </div>
-          <div mt="5">
+
+          <div class="spacer">
             <div class="info">
               <h4>Université Evry Val d’Essonne</h4>
               <span>2012</span>
             </div>
             <span>Licence mention STAPS première année</span>
           </div>
-          <div mt="5">
+
+          <div class="spacer">
             <div class="info">
               <h4>Institut Saint Pierre Brunoy</h4>
               <span>2012</span>
             </div>
             <span>Baccalauréat professionnel de comptabilité</span>
           </div>
-          <div mt="5">
+
+          <div class="spacer">
             <div class="info">
               <h4>Institut Saint Pierre Brunoy</h4>
               <span>2011</span>
             </div>
             <span>Brevet d’études professionnelles métiers de la comptabilité</span>
           </div>
+
         </div>
       </div>
     </div>
@@ -232,5 +247,3 @@ const { t } = useI18n()
 meta:
   layout: cv
 </route>
-
-

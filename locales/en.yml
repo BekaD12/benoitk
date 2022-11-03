@@ -12,6 +12,19 @@ intro:
   aka: Also known as
   whats-your-name: What's your name?
 not-found: Not found
+month:
+  january: jan.
+  february: feb.
+  march: mar.
+  april: apr.
+  may: may
+  june: june
+  july: july
+  august: aug.
+  september: sept.
+  october: oct.
+  november: nov.
+  december: dec.
 cv:
   name: benoit kourotchkine
   position: full stack developer
@@ -27,15 +40,16 @@ cv:
   software: software
   os: operating system
   shopify-title: Shopify developer
-  shopify-desc: Development of themes for two sites and their fully customized back-office
+  shopify-desc: Development of themes and their fully customized back-office
   andafter-title: Fullstack developer
   andafter-desc-1: Development and maintenance of more than 15 e-commerce sites
   andafter-desc-2: Autonomous management on a community platform
   andafter-desc-3: Integration of various graphic creations
   andafter-desc-4: Co-design in collaboration with the creative teams
   andafter-desc-5: Expertise on a proprietary CRM (easyboutiq)
+  vue-title: Self-taught learning
+  vue-desc: Vue.js ecosystem
   zara-title: Customer advisor
   zara-desc: Customer service / Advice and sales / Reserve management / Cash register opening and closing / Merchandising
 home:
   description: I am currently looking for a Fullstack developer position with a Frontend predominance which is the branch of my job that I master and appreciate the most. When I started my career as a web developer, I noticed quickly that I was interested into being the glue between design and development. Give me a web mockup and I'll come out with a great frontend, I code a lot of custom CSS and I love it. I currently use Vue.js, Typescript and Shopify (liquid) on personal and freelance projects, it would be a good opportunity to be able to use these technologies in a professional environment.
-

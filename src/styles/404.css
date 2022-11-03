@@ -1,11 +1,11 @@
 #monkey_404 {
     cursor: pointer;
-    height: 600px;
+    height: 60rem;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 1000px;
+    width: 100rem;
 }
 
 #monkey_404 .st0 {

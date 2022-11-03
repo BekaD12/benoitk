@@ -11,19 +11,18 @@ const { t } = useI18n()
   </nav>
 </template>
 
-
 <style scoped>
 nav {
-  position: fixed;
   font-size: 2.5rem;
-  margin: 10px 15px;
-  top: 0;
+  margin: 2rem .5rem;
+  position: fixed;
   right: 0;
+  top: 0;
 }
 
 @media (max-width: 576px) {
   nav {
-    margin: 5px 7.5px;
+    margin: 1.5rem;
   }
 }
 </style>

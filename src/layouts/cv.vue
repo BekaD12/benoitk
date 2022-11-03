@@ -7,13 +7,27 @@
 
 <style scoped>
 .resume {
-  padding-bottom: 30px;
+  padding: 0 4.5rem;
+  margin-bottom: 8rem;
 }
 
 @media (max-width: 576px) {
   .resume {
-    padding: 0 25px;
-    margin-bottom: 100px;
+    margin-bottom: 10rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .resume {
+    margin-bottom: 10rem;
+    padding: 0 4.5rem;
+  }
+}
+
+@media (max-width: 1180px) and (orientation: landscape) {
+  .resume {
+    margin-bottom: 10rem;
   }
 }
 </style>

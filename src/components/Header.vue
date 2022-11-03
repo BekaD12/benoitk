@@ -9,19 +9,21 @@ const toggleLocales = () => {
 
 <template>
   <nav color="black dark:#fffdf2">
-    <a href="./" class="icon-btn mx-2" :title="t('button.home')">
+    <a href="./" class="icon-btn mx-3" :title="t('button.home')">
       <div i-carbon-home />
     </a>
-    <a v-if="locale == 'fr'" class="icon-btn mx-2" href="/cv_benoitk.pdf" target="blank">
+    <a v-if="locale == 'fr'" class="icon-btn mx-3" target="_blank" href="/cv_benoitk.pdf" aria-label="resume"
+      rel="noopener" itemprop="pdf">
       <div i-carbon:generate-pdf />
     </a>
-    <a v-if="locale == 'en'" class="icon-btn mx-2" href="/cv_benoitk_en.pdf" target="blank">
+    <a v-if="locale == 'en'" class="icon-btn mx-3" target="_blank" href="/cv_benoitk_en.pdf" aria-label="resume"
+      rel="noopener" itemprop="pdf">
       <div i-carbon:generate-pdf />
     </a>
-    <a class="icon-btn mx-2" :title="t('button.toggle_dark')" @click="toggleDark()">
+    <a class="icon-btn mx-3" :title="t('button.toggle_dark')" @click="toggleDark()">
       <div i="carbon-sun dark:carbon-moon" />
     </a>
-    <a class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales">
+    <a class="icon-btn mx-3" :title="t('button.toggle_langs')" @click="toggleLocales()">
       <div v-if="locale == 'fr'" i-twemoji:flag-france />
       <div v-if="locale == 'en'" i-twemoji:flag-united-kingdom />
     </a>
@@ -30,29 +32,72 @@ const toggleLocales = () => {
 
 <style scoped>
 nav {
-  position: fixed;
   font-size: 2.5rem;
-  margin: 10px 15px;
-  top: 0;
+  margin: 2rem 1.5rem;
+  position: fixed;
   right: 0;
+  top: 0;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   nav {
-    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-    text-align: center;
     background-color: white;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
     bottom: 0;
-    padding: 5px 0px;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    text-align: center;
     top: auto;
+    width: 100%;
   }
 
   .dark nav {
     background-color: var(--black);
-    box-shadow: 0 0 10px rgb(250 250 250 / 20%);
+    box-shadow: 0 0 1rem rgb(250 250 250 / 20%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  nav {
+    background-color: white;
+    bottom: 0;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+    font-size: 3rem;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    text-align: center;
+    top: auto;
+    width: 100%;
+  }
+
+  .dark nav {
+    background-color: var(--black);
+    box-shadow: 0 0 1rem rgb(250 250 250 / 20%);
+  }
+}
+
+@media (max-width: 1180px) and (orientation: landscape) {
+  nav {
+    background-color: white;
+    bottom: 0;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+    font-size: 3rem;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    text-align: center;
+    top: auto;
+    width: 100%;
+  }
+
+  .dark nav {
+    background-color: var(--black);
+    box-shadow: 0 0 1rem rgb(250 250 250 / 20%);
   }
 }
 </style>
