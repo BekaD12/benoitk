@@ -14,7 +14,7 @@ const { t } = useI18n()
 <style scoped>
 nav {
   font-size: 2.5rem;
-  margin: 2rem .5rem;
+  margin: 2rem 1.5rem;
   position: fixed;
   right: 0;
   top: 0;
