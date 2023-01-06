@@ -4,6 +4,7 @@ const { t, availableLocales, locale } = useI18n()
 const toggleLocales = () => {
   const locales = availableLocales
   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+  localStorage.setItem('lang', locale.value)
 }
 </script>
 
@@ -20,13 +21,13 @@ const toggleLocales = () => {
       rel="noopener" itemprop="pdf">
       <div i-carbon:generate-pdf />
     </a>
-    <a class="icon-btn mx-3" :title="t('button.toggle_dark')" @click="toggleDark()">
+    <div class="icon-btn mx-3" :title="t('button.toggle_dark')" @click="toggleDark()">
       <div i="carbon-sun dark:carbon-moon" />
-    </a>
-    <a class="icon-btn mx-3" :title="t('button.toggle_langs')" @click="toggleLocales()">
+    </div>
+    <div class="icon-btn mx-3" :title="t('button.toggle_langs')" @click="toggleLocales()">
       <div v-if="locale == 'fr'" i-twemoji:flag-france />
       <div v-if="locale == 'en'" i-twemoji:flag-united-kingdom />
-    </a>
+    </div>
   </nav>
 </template>
 

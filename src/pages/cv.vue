@@ -167,7 +167,7 @@ const { t } = useI18n()
           <div class="spacer">
             <div class="info">
               <h4>{{ t('cv.vue-title') }}</h4>
-              <span>{{ t('month.april') }} 2022 - {{ t('month.october') }} 2022</span>
+              <span>2022</span>
             </div>
             <p>
               {{ t('cv.vue-desc') }}
