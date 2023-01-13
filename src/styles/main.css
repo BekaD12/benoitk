@@ -126,9 +126,10 @@ svg:not(:root) {
 }
 
 .wrapper .social {
+    align-items: flex-start;
     display: flex;
-    justify-content: space-between;
-    width: 25%;
+    gap: .8rem;
+    justify-content: flex-start
 }
 
 .wrapper .social a.mail svg {
@@ -139,9 +140,13 @@ svg:not(:root) {
     margin-top: .1rem;
 }
 
+.wrapper .social a.github svg {
+    margin-top: -.1rem;
+}
+
 .wrapper .social svg {
     height: auto;
-    width: 3.5rem;
+    width: 3.6rem;
 }
 
 @keyframes fade {
