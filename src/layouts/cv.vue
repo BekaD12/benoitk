@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="resume" text="dark:white">
+  <div class="resume" text="dark:#fffdf2">
     <router-view />
   </div>
 </template>

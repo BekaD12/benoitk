@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-html {
-    font-size: 62.5%;
+:root {
+    --black: #050505;
+    --white: #fffdf2;
+    --blue: #2563af;
 }
 
-body {
-    font-size: 1.6em;
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 html,
@@ -15,9 +21,13 @@ body,
     padding: 0;
 }
 
+body {
+    font-size: 1.6em;
+}
+
 html.dark {
-    background: black;
-    color: var(--white)
+    background-color: var(--black);
+    color: var(--white);
 }
 
 #nprogress {
@@ -35,32 +45,12 @@ html.dark {
     z-index: 1031;
 }
 
-
-/* custom */
-
-:root {
-    --black: #000;
-    --white: #fffdf2;
-    --blue: #2563af;
-}
-
 .container {
     margin: 0 auto;
 }
 
 .spacing {
     margin: 4rem 0;
-}
-
-html {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-body {
-    margin: 0;
 }
 
 a {
@@ -91,7 +81,7 @@ svg:not(:root) {
 }
 
 .wrapper h1 {
-    color: var(--black, #000);
+    color: var(--black);
     font-size: 5.4rem;
     font-weight: bold;
     margin: 0;
@@ -146,7 +136,7 @@ svg:not(:root) {
 
 .wrapper .social svg {
     height: auto;
-    width: 3.6rem;
+    width: 3.2rem;
 }
 
 @keyframes fade {
@@ -172,18 +162,6 @@ svg:not(:root) {
         width: 50%;
     }
 }
-
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {}
-
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {}
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {}
-
-/*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {}
 
 html.dark .wrapper h1 {
     color: #fffdf2;

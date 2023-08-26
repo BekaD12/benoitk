@@ -6,25 +6,27 @@ const toggleLocales = () => {
   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
   localStorage.setItem('lang', locale.value)
 }
+
+const resumeLink = computed(() => {
+  return locale.value === 'fr' ? '/cv_benoitk.pdf' : '/cv_benoitk_en.pdf'
+})
+
 </script>
 
 <template>
-  <nav color="black dark:#fffdf2">
-    <a href="./" class="icon-btn mx-3" :title="t('button.home')">
+  <nav color="#050505 dark:#fffdf2">
+    <a href="./" class="icon-btn mx-2" :title="t('button.home')">
       <div i-carbon-home />
     </a>
-    <a v-if="locale == 'fr'" class="icon-btn mx-3" target="_blank" href="/cv_benoitk.pdf" aria-label="resume"
-      rel="noopener" itemprop="pdf">
+
+    <a class="icon-btn mx-2" target="_blank" :href="resumeLink" aria-label="resume" rel="noopener" itemprop="pdf">
       <div i-carbon:generate-pdf />
     </a>
-    <a v-if="locale == 'en'" class="icon-btn mx-3" target="_blank" href="/cv_benoitk_en.pdf" aria-label="resume"
-      rel="noopener" itemprop="pdf">
-      <div i-carbon:generate-pdf />
-    </a>
-    <div class="icon-btn mx-3" :title="t('button.toggle_dark')" @click="toggleDark()">
+
+    <div class="icon-btn mx-2" :title="t('button.toggle_dark')" @click="toggleDark()">
       <div i="carbon-sun dark:carbon-moon" />
     </div>
-    <div class="icon-btn mx-3" :title="t('button.toggle_langs')" @click="toggleLocales()">
+    <div class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales()">
       <div v-if="locale == 'fr'" i-twemoji:flag-france />
       <div v-if="locale == 'en'" i-twemoji:flag-united-kingdom />
     </div>
