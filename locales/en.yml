@@ -39,6 +39,7 @@ cv:
   languages-es: Spanish - Medium
   software: software
   os: operating system
+  host: Hosting and Deployment
   freelance-title: Freelance developer
   shopify-title: Shopify developer
   shopify-desc: Development of themes and their fully customized back-office
@@ -53,4 +54,4 @@ cv:
   zara-title: Customer advisor
   zara-desc: Customer service / Advice and sales / Reserve management / Cash register opening and closing / Merchandising
 home:
-  description: I am currently looking for a Fullstack developer position with a Frontend predominance which is the branch of my job that I master and appreciate the most. When I started my career as a web developer, I noticed quickly that I was interested into being the glue between design and development. Give me a web mockup and I'll come out with a great frontend, I code a lot of custom CSS and I love it. I currently use Vue.js (Vite) and Shopify (liquid) on personal and freelance projects, it would be a good opportunity to be able to use these technologies in a professional environment.
+  description: I am currently seeking a Fullstack developer position with a primary focus on Frontend development, which is the aspect of the job that I excel in and enjoy the most. As I embarked on my journey as a web developer, it became evident to me that I was drawn to bridging the gap between design and development. Give me a web mockup and I'll come out with a great frontend, I code a lot of custom CSS and I love it. I currently use Vue.js (Vite) and Shopify (liquid) on personal and freelance projects, it would be a good opportunity to be able to use these technologies in future mission.

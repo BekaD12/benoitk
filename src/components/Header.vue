@@ -14,7 +14,7 @@ const resumeLink = computed(() => {
 </script>
 
 <template>
-  <nav color="#050505 dark:#fffdf2">
+  <nav color="#080808 dark:#fffdf2">
     <a href="./" class="icon-btn mx-2" :title="t('button.home')">
       <div i-carbon-home />
     </a>

@@ -29,7 +29,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 2.5rem;
+  margin-top: 6rem;
 }
 
 .mail,
@@ -122,6 +122,10 @@ p.description {
     width: calc(100%);
   }
 
+  nav {
+    margin-top: 2rem;
+  }
+
   .mail,
   .address {
     font-size: 1.1rem;
@@ -129,10 +133,6 @@ p.description {
 
   .data {
     flex-direction: column;
-  }
-
-  .info {
-    align-items: baseline;
   }
 
   ul {

@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="resume" text="dark:#fffdf2">
+  <div class="resume">
     <router-view />
   </div>
 </template>
@@ -14,14 +14,14 @@
 @media (max-width: 576px) {
   .resume {
     margin-bottom: 10rem;
-    padding: 0 2.5rem;
+    padding: 0 2rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .resume {
     margin-bottom: 10rem;
-    padding: 0 4.5rem;
+    padding: 0 4rem;
   }
 }
 

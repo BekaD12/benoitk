@@ -50,13 +50,16 @@ const { t } = useI18n()
                   Languages - HTML / CSS / JavaScript
                 </li>
                 <li>
-                  Framework CSS - UnoCSS / WindiCSS
+                  Framework CSS - UnoCSS
                 </li>
                 <li>
-                  Framework JS - Vue.js / Vite
+                  Framework JS - Vue.js / Vite / Astro
                 </li>
                 <li>
                   Templating - Vitesse
+                </li>
+                <li>
+                  {{ t('cv.host') }} - Netlify
                 </li>
                 <li>
                   Versioning - GitHub / SVN
@@ -128,12 +131,9 @@ const { t } = useI18n()
           <div class="spacer">
             <div class="info">
               <h4>{{ t('cv.freelance-title') }}</h4>
-              <span>{{ t('month.september') }} 2021 - {{ t('month.september') }} 2023</span>
+              <span>{{ t('month.september') }} 2021 - {{ t('month.august') }} 2023</span>
             </div>
-            <h5>Shopify</h5>
-            <ul>
-              <li>{{ t('cv.shopify-desc') }}</li>
-            </ul>
+            <h5>Shopify | Vue.js</h5>
           </div>
 
           <div class="spacer">
@@ -169,7 +169,7 @@ const { t } = useI18n()
           <div class="spacer">
             <div class="info">
               <h4>{{ t('cv.vue-title') }}</h4>
-              <span>2022</span>
+              <span>2021 - 2023</span>
             </div>
             <p>
               {{ t('cv.vue-desc') }}
