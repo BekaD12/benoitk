@@ -64,9 +64,6 @@ const { t } = useI18n()
                 <li>
                   Versioning - GitHub / SVN
                 </li>
-                <li>
-                  Library - jQuery
-                </li>
               </ul>
             </div>
             <div class="spacing">
