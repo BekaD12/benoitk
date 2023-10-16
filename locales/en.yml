@@ -55,3 +55,11 @@ cv:
   zara-desc: Customer service / Advice and sales / Reserve management / Cash register opening and closing / Merchandising
 home:
   description: I am currently seeking a Fullstack developer position with a primary focus on Frontend development, which is the aspect of the job that I excel in and enjoy the most. As I embarked on my journey as a web developer, it became evident to me that I was drawn to bridging the gap between design and development. Give me a web mockup and I'll come out with a great frontend, I code a lot of custom CSS and I love it. I currently use Vue.js (Vite) and Shopify (liquid) on personal and freelance projects, it would be a good opportunity to be able to use these technologies in future mission.
+  fullstack: developer fullstack
+  frontend: developer frontend
+  backend: developer backend
+experiment:
+  title: Check my Experiments
+  aniairing: Aniairing is a custom airing schedule build with Anichart API
+  pokebeka: Pokébeka is a Pokedex app fetching the PokéApi
+  setuped: Setuped, exploring trending setup from the r/battlestations subreddit

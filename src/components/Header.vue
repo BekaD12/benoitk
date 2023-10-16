@@ -35,7 +35,7 @@ const resumeLink = computed(() => {
 
 <style scoped>
 nav {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin: 2rem 1.5rem;
   position: fixed;
   right: 0;

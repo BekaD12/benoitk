@@ -1,4 +1,5 @@
 <script setup>
+const { t } = useI18n()
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 const writeTimeout = 80
 const eraseTimeout = 60
@@ -59,11 +60,14 @@ function throttle(func, delay) {
 
 <template>
   <div ref="wrapper" class="wrapper">
-    <div data-text class="data-text" />
-    <span class="item">Développeur frontend</span>
-    <span class="item">Développeur backend</span>
-    <span class="item">Développeur fullstack</span>
-    <h1>Benoit Kourotchkine</h1>
-    <Social />
+    <div class="content">
+      <div data-text class="data-text" />
+      <span class="item">{{ t('home.frontend') }}</span>
+      <span class="item">{{ t('home.backend') }}</span>
+      <span class="item">{{ t('home.fullstack') }}</span>
+      <h1>Benoit Kourotchkine</h1>
+      <Social />
+      <Experiment />
+    </div>
   </div>
 </template>

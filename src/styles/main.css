@@ -4,6 +4,8 @@
     --black: #080808;
     --white: #fffdf2;
     --blue: #2563af;
+    --shadow: 0 0 2.5rem rgb(0 0 0 / 10%);
+    --border: hsl(0deg 0% 3.14% / 50%)
 }
 
 html {
@@ -28,6 +30,7 @@ body {
 html.dark {
     background-color: var(--black);
     color: var(--white);
+    --border: hsl(0deg 100% 97.45% / 50%);
 }
 
 #nprogress {
@@ -68,11 +71,12 @@ svg:not(:root) {
 }
 
 .wrapper {
-    left: 50%;
-    position: absolute;
-    text-align: center;
-    top: 45%;
-    transform: translate(-50%, -50%);
+    align-items: center;
+    /* display: grid;
+    place-items: center; */
+    display: flex;
+    height: 100vh;
+    justify-content: center;
 }
 
 .wrapper .item {
@@ -82,25 +86,25 @@ svg:not(:root) {
 
 .wrapper h1 {
     color: var(--black);
-    font-size: 5.4rem;
+    font-size: 6rem;
     font-weight: bold;
     margin: 0;
     text-align: left;
 }
 
-.wrapper>.data-text {
+.wrapper .data-text {
     align-items: flex-end;
     color: var(--blue);
     display: flex;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: bold;
     letter-spacing: .1rem;
-    min-height: 2.1rem;
+    min-height: 2.8rem;
     text-transform: uppercase;
     user-select: none;
 }
 
-.wrapper>.data-text:after {
+.wrapper .data-text:after {
     animation-direction: alternate;
     animation-duration: 350ms;
     animation-iteration-count: infinite;
@@ -116,9 +120,9 @@ svg:not(:root) {
 }
 
 .wrapper .social {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
-    gap: .8rem;
+    gap: .5rem;
     justify-content: flex-start
 }
 
@@ -134,9 +138,25 @@ svg:not(:root) {
     margin-top: -.1rem;
 }
 
+.wrapper .social div {
+    align-items: center;
+    border: .2rem solid var(--blue);
+    border-radius: 50%;
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    padding: .8rem;
+    width: 5rem;
+}
+
 .wrapper .social svg {
     height: auto;
-    width: 3.2rem;
+    opacity: .75;
+    width: 2.8rem;
+}
+
+.wrapper .social svg:hover {
+    opacity: 1;
 }
 
 @keyframes fade {
@@ -150,16 +170,31 @@ svg:not(:root) {
 }
 
 @media (max-width: 576px) {
+    .wrapper {
+        height: auto;
+        margin-top: 10rem;
+        padding: 0 2rem;
+    }
+
     .wrapper h1 {
         font-size: 4rem;
     }
 
-    .wrapper>.data-text {
+    .wrapper .data-text {
         font-size: 1.6rem;
     }
 
     .wrapper .social {
         width: 50%;
+    }
+
+    .wrapper .social div {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .wrapper .social svg {
+        width: 2rem;
     }
 }
 
@@ -175,6 +210,6 @@ html.dark svg path {
     fill: #fffdf2;
 }
 
-html.dark .wrapper>.data-text:after {
+html.dark .wrapper .data-text:after {
     background: #fffdf2;
 }
