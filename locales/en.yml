@@ -60,6 +60,6 @@ home:
   backend: developer backend
 experiment:
   title: Check my Experiments
-  aniairing: Aniairing is a custom airing schedule build with Anichart API
-  pokebeka: Pokébeka is a Pokedex app fetching the PokéApi
-  setuped: Setuped, exploring trending setup from the r/battlestations subreddit
+  aniairing: Aniairing
+  pokebeka: Pokébeka
+  setuped: Setuped

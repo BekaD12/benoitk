@@ -1,0 +1,67 @@
+.typing .item {
+    display: none;
+    visibility: hidden;
+}
+
+.typing h1 {
+    color: var(--black);
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.typing .data-text {
+    align-items: flex-end;
+    color: var(--blue);
+    display: flex;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    min-height: 2.8rem;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.typing .data-text:after {
+    animation-direction: alternate;
+    animation-duration: 350ms;
+    animation-iteration-count: infinite;
+    animation-name: fade;
+    background: var(--black);
+    color: var(--blue);
+    content: "";
+    display: block;
+    height: .3rem;
+    margin-bottom: .4rem;
+    margin-left: .2rem;
+    width: 1.2rem;
+}
+
+html.dark .typing h1 {
+    color: #fffdf2;
+}
+
+html.dark .typing .data-text:after {
+    background: #fffdf2;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .typing h1 {
+        font-size: 4rem;
+    }
+
+    .typing .data-text {
+        font-size: 1.6rem;
+    }
+}

@@ -39,7 +39,7 @@
       </a>
     </div>
 
-    <div>
+    <!-- <div>
       <a
         class="linkedin" target="_blank" href="https://www.linkedin.com/in/benoitkourot/" aria-label="linkedin"
         rel="noopener" title="linkedin : benoitkourot"
@@ -62,7 +62,7 @@
           />
         </svg>
       </a>
-    </div>
+    </div> -->
 
     <div>
       <a
@@ -85,3 +85,7 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+@import '~/styles/social.css';
+</style>

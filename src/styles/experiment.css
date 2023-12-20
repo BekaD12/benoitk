@@ -1,0 +1,79 @@
+.experiments-container {
+    margin-top: 2.5rem;
+}
+
+.experiments-content {
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+.experiments-container h2 {
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    gap: .8rem;
+    justify-content: center;
+}
+
+.experiments-content svg {
+    width: 3.2rem;
+}
+
+.experiments-content .bubble {
+    align-items: center;
+    background: var(--item-background);
+    border-radius: var(--item-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.experiments-content .bubble:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.experiments-content .bubble span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.experiments-content img {
+    margin: 0 auto;
+    width: 6rem;
+}
+
+@media (max-width: 576px) {
+    .experiments-content {
+        gap: .5rem;
+    }
+
+    .experiments-container {
+        margin-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .experiments-container svg {
+        width: 2.5rem;
+    }
+
+    .experiments-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .experiments-content .bubble {
+        flex: auto;
+        height: auto;
+        padding: 1.6rem;
+        width: 100%;
+    }
+}

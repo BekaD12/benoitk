@@ -10,14 +10,16 @@ const toggleLocales = () => {
 
 <template>
   <nav color="#080808 dark:#fffdf2">
-    <div class="icon-btn mx-2" :title="t('button.toggle_dark')" @click="toggleDark()">
-      <div i="carbon-sun dark:carbon-moon" />
-    </div>
+    <div>
+      <div class="icon-btn mx-2" :title="t('button.toggle_dark')" @click="toggleDark()">
+        <div i="carbon-sun dark:carbon-moon" />
+      </div>
 
-        <div class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales()">
+      <div class="icon-btn mx-2" :title="t('button.toggle_langs')" @click="toggleLocales()">
         <div v-if="locale == 'fr'" i-twemoji:flag-france />
         <div v-if="locale == 'en'" i-twemoji:flag-united-kingdom />
       </div>
+    </div>
   </nav>
 </template>
 

@@ -1,0 +1,66 @@
+.wrapper .social {
+    align-items: center;
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-start
+}
+
+.wrapper .social a.mail svg {
+    margin-top: .3rem;
+}
+
+.wrapper .social a.linkedin svg {
+    margin-top: .1rem;
+}
+
+.wrapper .social a.github svg {
+    margin-top: -.1rem;
+}
+
+.wrapper .social div {
+    align-items: center;
+    /* border: .1rem solid var(--item-border); */
+    border-radius: 50%;
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    padding: 1.5rem;
+    width: 5rem;
+}
+
+.wrapper .social svg {
+    height: auto;
+    opacity: .8;
+    width: 3.4rem;
+}
+
+.wrapper .social svg:hover {
+    opacity: 1;
+}
+
+html.dark .social svg {
+    fill: #fffdf2;
+}
+
+html.dark .social svg path {
+    fill: #fffdf2;
+}
+
+@media (max-width: 576px) {
+    .typing h1 {
+        font-size: 4.5rem;
+    }
+
+    .wrapper .social {
+        width: 50%;
+    }
+
+    .wrapper .social div {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .wrapper .social svg {
+        width: 4rem;
+    }
+}

@@ -60,6 +60,6 @@ home:
   backend: développeur backend
 experiment:
   title: Jetez un œil à mes créations
-  aniairing: Aniairing est un calendrier de diffusion créée avec l'API d'Anichart
-  pokebeka: Pokébeka, un Pokedex qui fetch ses infos depuis la PokéApi
-  setuped: Setuped, pour explorer les setups tendance du subreddit battlestations
+  aniairing: Aniairing
+  pokebeka: Pokébeka
+  setuped: Setuped
